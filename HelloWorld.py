@@ -48,3 +48,16 @@ print(r'This \
 is attached')
 
 # p.42
+
+some_list = [1, 3, 4, 5, None, 3]
+
+
+for element in some_list:
+    if not element:
+        pass
+    print("print after pass") # will print after pass
+
+for element in some_list:
+    if not element:
+       continue
+    print("not print after continue") # will not print after continue
