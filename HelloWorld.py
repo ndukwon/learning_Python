@@ -61,3 +61,20 @@ for element in some_list:
     if not element:
        continue
     print("not print after continue") # will not print after continue
+
+import multiprocessing as mp
+print("\nmp.cpu_count()=", mp.cpu_count())
+
+from datetime import datetime
+
+import pytz
+
+utc = pytz.utc # utc is Coordinated Universal Time
+ist = pytz.timezone('Asia/Kolkata') #IST is Indian Standard Time
+print("utc:", utc)
+print("ist:", ist)
+
+now = datetime.now(tz=utc) # this is the current time in UTC
+ist_now = now.astimezone(ist) # this is the current time in IST.
+print("now:", now)
+print("ist_now:", ist_now)
